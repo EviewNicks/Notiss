@@ -1,0 +1,15 @@
+@import '@fontsource/poppins';
+@import '@fontsource/shadows-into-light';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
