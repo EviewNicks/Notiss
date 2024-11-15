@@ -2,7 +2,7 @@ import React from "react";
 
 const ButtonIconNav = ({
   icon,
-  size = "medium", // New prop for size
+  size = "medium",
   sizeIcon = 24,
   tooltip = "",
   iconClassName = "",
@@ -25,7 +25,7 @@ const ButtonIconNav = ({
     >
       {React.cloneElement(icon, { size: sizeIcon, className: iconClassName })}
       {tooltip && (
-        <span className="sr-only">{tooltip}</span> // Tooltip for accessibility
+        <span className="sr-only">{tooltip}</span>
       )}
     </button>
   );

@@ -36,6 +36,9 @@ const AddForm = ({ notes = [], setNotes }) =>
 
     const handleSubmit = (e) =>
     {
+        let updatedNotes;
+        let newNote;
+        const validNotes = Array.isArray(notes) ? notes : [];
         e.preventDefault();
 
         // Validasi input
@@ -44,12 +47,6 @@ const AddForm = ({ notes = [], setNotes }) =>
             alert("Judul dan deskripsi catatan harus diisi!");
             return;
         }
-
-        // Pastikan 'notes' adalah array yang valid
-        const validNotes = Array.isArray(notes) ? notes : [];
-
-        let updatedNotes;
-        let newNote; // Tempatkan 'newNote' di luar blok agar bisa diakses di console.log
 
         if (noteId)
         {
@@ -73,7 +70,7 @@ const AddForm = ({ notes = [], setNotes }) =>
 
         // Simpan data terbaru ke localStorage
         localStorage.setItem("notes", JSON.stringify(updatedNotes));
-        setNotes(updatedNotes); // Update state dengan catatan terbaru
+        setNotes(updatedNotes);
 
         // Menampilkan note yang baru disubmit di console
         if (!noteId)
@@ -89,7 +86,6 @@ const AddForm = ({ notes = [], setNotes }) =>
         setNote('');
         setSelectedColor('#ffffff');
 
-        // Arahkan kembali atau lakukan navigasi setelah submit
         navigate("/");
     };
 

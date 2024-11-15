@@ -13,7 +13,7 @@ const Example = () =>
     console.log("Button clicked!");
   };
 
-  return <AddForm />;
+  return <NoteCard />;
 };
 
 export default Example;

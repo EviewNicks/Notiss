@@ -25,7 +25,7 @@ const NoteCard = ({
             icon={<CancelIcon />}
             size="tiny"
             sizeIcon={26}
-            onClick={() => onDelete(id)} // Menggunakan props onDelete
+            onClick={() => onDelete(id)}
           />
         </div>
       </header>
@@ -61,7 +61,7 @@ const NoteCard = ({
           icon={<EditIcon />}
           size="tiny"
           sizeIcon={24}
-          onClick={() => onEdit(id)} // Menggunakan props onEdit
+          onClick={() => onEdit(id)}
         />
 
         {archived ? (
@@ -69,14 +69,14 @@ const NoteCard = ({
             icon={<UnarchiveIcon />}
             size="tiny"
             sizeIcon={24}
-            onClick={() => onUnarchive(id)} // Menggunakan props onUnarchive
+            onClick={() => onUnarchive(id)}
           />
         ) : (
           <ButtonIconAction
             icon={<AddArchiveIcon />}
             size="tiny"
             sizeIcon={24}
-            onClick={() => onArchive(id)} // Menggunakan props onArchive
+            onClick={() => onArchive(id)}
           />
         )}
       </div>
