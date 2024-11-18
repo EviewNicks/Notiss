@@ -9,7 +9,7 @@ const NoteCard = ({
   textDescription,
   dateText,
   archived,
-  color,
+  color = "#FFFFFF",
   onDelete,
   onArchive,
   onUnarchive,

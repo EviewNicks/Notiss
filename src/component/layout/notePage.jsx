@@ -4,6 +4,8 @@ import { NoteCard } from "../Atoms/card";
 import { Navbar, Header } from "../moleculs";
 import { useNavigate } from "react-router-dom";
 import NotesData from "../../data/Note";
+import { getInitialData } from '/src/utils/index.js';
+
 
 function NotePage({ notes, setNotes, isArchived })
 {
@@ -21,8 +23,9 @@ function NotePage({ notes, setNotes, isArchived })
       setNotes(JSON.parse(storedNotes)); // Muat data dari localStorage jika ada
     } else
     {
-      setNotes(NotesData); // Muat data default jika localStorage kosong
-      localStorage.setItem("notes", JSON.stringify(NotesData));
+      const initialData = getInitialData();
+      setNotes(initialData); // Muat data default jika localStorage kosong
+      localStorage.setItem("notes", JSON.stringify(initialData));
     }
 
     // console.log("Current noteId:", noteId);
@@ -76,7 +79,7 @@ function NotePage({ notes, setNotes, isArchived })
         <Navbar />
         <div className="flex flex-col items-start gap-2 flex-[1_0_0]">
           <Header onSearchSubmit={handleSearchSubmit} />
-          <section className="notes-container flex max-w-[932px] pb-20 items-center content-center gap-2 flex-wrap">
+          <section className="notes-container flex  pb-20 items-center content-center gap-2 flex-wrap">
             {filteredNotes.length > 0 ? (
               filteredNotes.map((note) => (
                 <NoteCard
