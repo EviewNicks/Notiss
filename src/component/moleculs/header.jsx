@@ -9,7 +9,7 @@ const Header = ({ className = "", onSearchSubmit }) =>
   const navigate = useNavigate();
   return (
     <div
-      className={`flex justify-between items-center px-20 w-full sticky top-0 z-50 bg-blackLayer-2 ${className}`}
+      className={`flex justify-between items-center md:px-20 sm:px-8 px-2 w-full sticky top-0 z-50 bg-blackLayer-2 ${className}`}
     >
       <SearchBar onSearchSubmit={onSearchSubmit} />
       <div className="flex justify-center items-center p-2">

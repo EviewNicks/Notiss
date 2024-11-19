@@ -10,10 +10,11 @@ function NavBar()
 
   return (
     <nav className="h-screen sticky top-0">
-      <ul className="bg-blackLayer-3 rounded-tl-[48px] p-9 flex flex-col items-center gap-8 shadow-lg shadow-[rgba(255,255,255,0.25)] h-full">
+      <ul className="bg-blackLayer-3 rounded-tl-[48px] lg:p-9 md:p-6 sm:px-4 sm:py-12 px-4 py-12  flex flex-col items-center gap-8 shadow-lg shadow-[rgba(255,255,255,0.25)] h-full">
         <li>
           <ButtonIconNav
             icon={<HomeIcon />}
+            size="medium"
             sizeIcon={30}
             tooltip="Home"
             onClick={() => navigate("/", { state: { isArchived: false } })}
@@ -22,6 +23,7 @@ function NavBar()
         <li>
           <ButtonIconNav
             icon={<ArchiveIcon />}
+            size="medium"
             sizeIcon={30}
             tooltip="Archive"
             onClick={() => navigate("/archive", { state: { isArchived: true } })}
