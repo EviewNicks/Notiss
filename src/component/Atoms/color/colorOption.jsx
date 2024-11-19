@@ -11,11 +11,11 @@ const colors = [
 const ColorOption = ({ selectedColor, onColorSelect }) =>
 {
     return (
-        <div className="color-option flex flex-col gap-6 p-3 rounded-2xl bg-gray-700">
+        <div className="color-option flex flex-col md:gap-6 gap-12 p-3 rounded-2xl bg-gray-700">
             {colors.map((clr) => (
                 <div
                     key={clr.id}
-                    className={`color w-16 h-16 rounded-lg cursor-pointer transition-transform duration-200 ${selectedColor === clr.color ? "outline outline-2 outline-white" : ""
+                    className={`color md:w-14 md:h-14 w-10 h-10 rounded-lg cursor-pointer transition-transform duration-200 ${selectedColor === clr.color ? "outline outline-2 outline-white" : ""
                         }`}
                     style={{ backgroundColor: clr.color }}
                     onClick={() => onColorSelect(clr.color)}
