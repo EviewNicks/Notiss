@@ -43,7 +43,8 @@ const SearchBar = ({ placeholder = "Search...", onSearchSubmit, leftIcon }) =>
       </div>
       <ButtonIconNav
         icon={<SearchIcon />}
-        forceTiny={true}
+        size="tiny"
+        sizeIcon={14}
         onClick={handleSearchClick}
       />
     </form>
