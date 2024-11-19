@@ -23,9 +23,9 @@ function NotePage({ notes, setNotes, isArchived })
       setNotes(JSON.parse(storedNotes)); // Muat data dari localStorage jika ada
     } else
     {
-      const initialData = getInitialData();
-      setNotes(initialData); // Muat data default jika localStorage kosong
-      localStorage.setItem("notes", JSON.stringify(initialData));
+      // const initialData = NotesData();
+      setNotes(NotesData); // Muat data default jika localStorage kosong
+      localStorage.setItem("notes", JSON.stringify(NotesData));
     }
 
     // console.log("Current noteId:", noteId);
